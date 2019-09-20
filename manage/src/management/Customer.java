@@ -1,5 +1,5 @@
 package management;
-
+//customerclass
 class Customer {
 
 	String name;

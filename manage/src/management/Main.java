@@ -43,7 +43,7 @@ public class Main {
 		c.setProofID(proofType);
 		c.setProofType(proofID);
 		c.register();
-		System.out.println("Thankyou for your services " + ++registerID);
+		System.out.println("Thankyou for your registration " + ++registerID);
 		System.out.println("do you want to continue  yes/no");
 		y=br.readLine();
 		}while(y.equals("yes"));
