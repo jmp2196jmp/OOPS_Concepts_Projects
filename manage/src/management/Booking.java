@@ -1,5 +1,4 @@
 package management;
-//booking
 public class Booking {
 	String ac;
 	String cot;
