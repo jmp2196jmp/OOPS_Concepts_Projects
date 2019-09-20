@@ -8,7 +8,7 @@ public class Main {
 	 static int rt=0;
 	 public static void main(String[] args) throws IOException
 	 {
-		    int ch,rm,er,i=0,j=0;
+		    int ch,er;
 			String ac;
 			String cot;
 			String cable;
@@ -132,27 +132,21 @@ public class Main {
 				  k=b.readLine();
 			}while(k.equalsIgnoreCase("no"));
 			System.out.println("Thank you for booking. Your room number is " + ++rt);
-		 rm=rt;
 		   booked[rt]=1;
-		//  ++j;
 			}
 			if(ch==2)
 			{
 				System.out.println("enter room no.");
 				 er=sc.nextInt();
-				// System.out.println(booked[1]  + "zero thin array");
+				// System.out.println(booked[1]  + " zero thin array");
 				 if(er<25)
 					  {
-					 
-					// System.out.println("Room number " +er+ " is  booked");
-					//for(i=0;i<=j;i++)
-					 
-					//{
-					 if(booked[er]==1)
+					 // System.out.println("Room number " +er+ " is  booked");
+				 if(booked[er]==1)
 					 {
 					System.out.println("Room number " +er+ " is  booked");	 
 					 }
-					//}
+					
 					 else
 					 {
 						 System.out.println("Room number " +er+ " is not  booked");
