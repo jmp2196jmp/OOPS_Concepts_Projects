@@ -132,7 +132,7 @@ public class Main {
 				  k=b.readLine();
 			}while(k.equalsIgnoreCase("no"));
 			System.out.println("Thank you for booking. Your room number is " + ++rt);
-		 //  rm=rt;
+		 rm=rt;
 		   booked[rt]=1;
 		//  ++j;
 			}
