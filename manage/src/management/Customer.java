@@ -1,13 +1,19 @@
 package management;
 class Customer {
-
-	String name;
+int rd;
+String name;
 	String address;
 	String contactNumber;
 	String email;
 	String proofType;
 	String proofID;
+	public int getRd() {
+	return rd;
+}
 
+public void setRd(int rd) {
+	this.rd = rd;
+}
 	public String getName() {
 		return name;
 	}
@@ -66,9 +72,30 @@ class Customer {
 		System.out.println(email);
 		System.out.println(proofType);
 		System.out.println(proofID);
-		
-	}	
+		}	
 	 
+	public void update(String name, String address,String contactNumber, String email,String proofType,String proofID,int rd)
+	{
+		System.out.println("your details as follows");	
+		System.out.println("Name: "+name);
+		System.out.println("Address:  "+address);
+		System.out.println("Contact Number: "+contactNumber);
+		System.out.println("E-Mail ID: "+email);
+		System.out.println("Proof type: "+proofType);
+		System.out.println("Proof id "+proofID);
+		System.out.println("Thankyou for your update regno. " +rd);
+	}
+	/*public void print(String name,int rd)
+	{
+		System.out.println("Customers list\n The registered customers are");
+		System.out.println(" Customer ID \t\tCustomer name" );
+		for(int i=0;i<rd;i++)
+		{
+			System.out.println(+bt[i]+"\t\t"+cust[i]);
+		}
+		
+	}*/	
+		
+	}
 	
-	
-}
+

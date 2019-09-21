@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 public class Main {
-	// static int registerID=0;
+	 static int registerID=0,rd=0;
 	 static int rt=0;
 	 public static void main(String[] args) throws IOException
 	 {
@@ -20,14 +20,18 @@ public class Main {
 			String email;
 			String proofType;
 			String proofID;
-			String y,k,u;
+			String y,k,u,ep;
 			int t=0;
 			int []booked =new int[25];
+			int []bt =new int[25];
+			String []cust=new String[20];
 			do
 			{
 			BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 			System.out.println("enter your name");
 			name=br.readLine();
+			cust[rd]=name;
+			++rd;
 			System.out.println("enter your address");
 			address=br.readLine();
 			System.out.println("entber your mobile no.");
@@ -46,10 +50,36 @@ public class Main {
 			c.setProofID(proofType);
 			c.setProofType(proofID);
 			c.register();
-			//System.out.println("Thankyou for your registration " + ++registerID);
+			System.out.println("Thankyou for your registration " + ++registerID);
 			System.out.println("do you want to register one more  yes/no");
 			y=br.readLine();
 			}while(y.equalsIgnoreCase("yes"));
+			bt[rd]=registerID;
+			
+			System.out.println("Customers list\n The registered customers are");
+			System.out.println(" Customer ID \tCustomer name" );
+			int h=0;
+			for(int i=1;i<=registerID;i++)
+			{
+				System.out.println(i+"\t\t"+cust[h]);
+				h++;
+			}
+			//Customer c2=new Customer();
+			//c2.print(name,registerID);
+			//rd=registerID;
+			System.out.println("do you want to update email id yes/no");
+			BufferedReader it=new BufferedReader(new InputStreamReader(System.in));
+			ep=it.readLine();
+			if(ep.equalsIgnoreCase("yes"))
+			{
+				System.out.println("update email id");
+				System.out.println("enter the email id");
+				email=it.readLine();
+				System.out.println(" email updated");
+				Customer c1=new Customer();
+				c1.update(name,address,contactNumber,email,proofType,proofID,rd);
+				
+			}
 			do
 			{
 			System.out.println("menu\n 1.Book\n 2.Status \n 3.Exit");
