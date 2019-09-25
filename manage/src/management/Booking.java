@@ -5,8 +5,20 @@ public class Booking {
 	String cable;
 	String wifi;
 	String laundry;
-	int t;
+	int t,d1,d2;
 
+	public int getD1() {
+		return d1;
+	}
+	public void setD1(int d1) {
+		this.d1 = d1;
+	}
+	public int getD2() {
+		return d2;
+	}
+	public void setD2(int d2) {
+		this.d2 = d2;
+	}
 	public int getT() {
 		return t;
 	}
@@ -47,7 +59,7 @@ public class Booking {
 	public void book()
 	{
 	
-		System.out.println("The total charge is " +t);
+		System.out.println("The total amount is " +t);
 		System.out.println("The services chosen are");
 		System.out.println(getCot()+ " cot " +getAc()+ " room");
 		System.out.println(getCable());

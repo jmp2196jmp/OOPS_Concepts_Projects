@@ -8,7 +8,7 @@ public class Main {
 	 static int rt=0;
 	 public static void main(String[] args) throws IOException
 	 {
-		    int ch,er;
+		    int ch,er,d1,d2;
 			String ac;
 			String cot;
 			String cable;
@@ -21,10 +21,11 @@ public class Main {
 			String proofType;
 			String proofID;
 			String y,k,u,ep;
-			int t=0;
+			int t=0,dat;
 			int []booked =new int[25];
 			int []bt =new int[25];
 			String []cust=new String[20];
+			int []dis=new int[25];
 			do
 			{
 			BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
@@ -82,7 +83,7 @@ public class Main {
 			}
 			do
 			{
-			System.out.println("menu\n 1.Book\n 2.Status \n 3.Exit");
+			System.out.println("menu\n 1.Book\n 2.Status \n 3.view\n 4.Exit");
 			Scanner sc= new Scanner(System.in);
 			ch=sc.nextInt();
 			if(ch==1)
@@ -156,6 +157,11 @@ public class Main {
 					  t=t+0;
 					  bk.setLaundry("witout laundry service");
 				  }
+				  System.out.println("Enter the date of booking");
+				  dat=sc.nextInt();
+				  //System.out.println("Enter the end date");
+				 // d2=sc.nextInt();
+
 				  bk.setT(t);
 				  bk.book();
 				 System.out.println("do you want to continue  yes/no");
@@ -187,6 +193,14 @@ public class Main {
 				 {
 					 System.out.println("Invalid room number");
 				 }
+			}
+			if(ch==3)
+			{
+				System.out.println("Enter the date of booking");
+				  d1=sc.nextInt();
+				  System.out.println("Enter the end date");
+				  d2=sc.nextInt();
+
 			}
 			 System.out.println("do you want to continue  yes/no");
 			  u=sc.next();
