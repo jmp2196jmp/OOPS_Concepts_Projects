@@ -11,7 +11,7 @@ public class Booking {
     private	String cable;
     private	String wifi;
     private	String laundry;
-    private	int t=0,d1,d2,dat;
+    private	int d1,d2,dat;
     int []booked =new int[25];
     int []dis=new int[25];
     int []bd =new int[25];
@@ -47,12 +47,12 @@ int stat=0;
 	public void setLaundry(String laundry) {
 		this.laundry = laundry;
 	}
-	public int getT() {
-		return t;
-	}
-	public void setT(int t) {
-		this.t = t;
-	}
+//	public int getT() {
+//		return t;
+//	}
+//	public void setT(int t) {
+//		this.t = t;
+//	}
 	public int getD1() {
 		return d1;
 	}
@@ -66,8 +66,8 @@ int stat=0;
 		this.d2 = d2;
 	}
 	BufferedReader b=new BufferedReader(new InputStreamReader(System.in));
-public void disp() throws IOException
-{
+public int disp() throws IOException
+{  int t=0;
 	System.out.println("AC/Non-AC(AC/nAC)");
 	  ac=b.readLine();
 	  if(ac.equalsIgnoreCase("AC"))
@@ -138,6 +138,7 @@ public void disp() throws IOException
 	   booked[roomno]=1;
 	   bd[bf]=roomno;
 	   ++bf;
+	   return t;
 }
 
 public void status(int stat)
@@ -155,9 +156,9 @@ public void status(int stat)
 }
 
 
-	public void book()
+	public void book(int k)
 	{
-	    System.out.println("The total amount is " +t);
+	    System.out.println("The total amount is " +k);
 		System.out.println("The services chosen are");
 		System.out.println(getCot()+ " cot " +getAc()+ " room");
 		System.out.println(getCable());

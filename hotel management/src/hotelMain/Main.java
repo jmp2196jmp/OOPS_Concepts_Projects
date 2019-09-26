@@ -52,8 +52,8 @@ public class Main {
 
 				  System.out.println("Booking");
 				  System.out.println("Please choose the your services required");
-					bk.disp();
-					bk.book();
+					int k=bk.disp();
+					bk.book(k);
 					break;
 			case 3:
 				System.out.println("enter room no.");
