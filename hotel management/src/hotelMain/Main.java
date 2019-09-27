@@ -24,7 +24,7 @@ public class Main {
 			Booking bk=new Booking();
 			do
 			{
-				System.out.println("menu\n 1.Regster\n 2.Book\n 3.Status\n 4.Email\n 5.All Customers\n 6.All Bookings \n 7.Exit");
+				System.out.println("menu\n 1.Register\n 2.Book\n 3.Status\n 4.Email\n 5.All Customers\n 6.All Bookings \n 7.Exit");
 			ch=Integer.parseInt(br.readLine());
 			switch(ch)
 			{
